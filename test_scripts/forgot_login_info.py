@@ -2,7 +2,7 @@ from _socket import timeout
 from playwright.sync_api import Playwright, sync_playwright, expect
 
 
-def run(playwright: Playwright) -> None:
+def forgot_login_info(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False, slow_mo=1000)
     context = browser.new_context()
     page = context.new_page()
@@ -36,4 +36,4 @@ def run(playwright: Playwright) -> None:
 
 
 with sync_playwright() as playwright:
-    run(playwright)
+    forgot_login_info(playwright)
